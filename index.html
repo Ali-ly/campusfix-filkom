@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="CampusFix FILKOM — Prototipe pelaporan fasilitas Fakultas Ilmu Komputer Universitas Brawijaya" />
+  <title>CampusFix FILKOM — Pelaporan Fasilitas FILKOM UB</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/logo-filkom.png" type="image/png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="utility-bar"><div class="container utility-inner"><span>FAKULTAS ILMU KOMPUTER · UNIVERSITAS BRAWIJAYA</span><a href="https://ub.ac.id" target="_blank" rel="noopener noreferrer">Kunjungi laman UB ↗</a></div></div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="./index.html" aria-label="Beranda CampusFix FILKOM">
+        <img class="brand-mark" src="assets/logo-filkom.png" alt="Logo Fakultas Ilmu Komputer Universitas Brawijaya" width="150" height="34">
+        <span class="brand-text">CampusFix<small>Pelaporan Fasilitas FILKOM UB</small></span>
+      </a>
+      <nav class="header-nav" aria-label="Navigasi utama"><a class="active" aria-current="location" href="#panduan">Panduan</a><a href="#form-section">Buat laporan</a></nav>
+    </div>
+  </header>
+
+  <main class="container main-layout">
+    <section class="hero" id="panduan">
+      <div>
+        <p class="eyebrow">Dari kepedulian, untuk FILKOM</p>
+        <h1>Kampus nyaman.<br>Belajar lebih <em>maksimal.</em></h1>
+        <p class="hero-copy">
+          Bantu rawat fasilitas Fakultas Ilmu Komputer Universitas Brawijaya. Sampaikan kerusakan yang kamu temukan agar lingkungan belajar kita tetap nyaman.
+          Mulai dari satu laporan, mulai dari kamu.
+        </p>
+        <div class="hero-signature"><span class="signature-line"></span> Satu laporan. Perubahan yang berarti.</div>
+      </div>
+      <div class="hero-card">
+        <div class="guide-top"><p class="guide-label">MUDAH, DALAM 3 LANGKAH</p><span aria-hidden="true">↗</span></div><h2>Kepedulianmu<br> dimulai di sini.</h2>
+        <ol class="report-steps"><li><span>01</span><div><strong>Temukan & catat</strong><p>Pilih kategori dan lokasi fasilitas.</p></div></li><li><span>02</span><div><strong>Ceritakan kondisinya</strong><p>Jelaskan masalah, sertakan foto bila ada.</p></div></li><li><span>03</span><div><strong>Simpan nomor tiket</strong><p>Lihat ringkasan setelah laporan dibuat.</p></div></li></ol>
+      </div>
+    </section>
+
+    <div class="workspace-heading"><div><p class="eyebrow">RUANG PARTISIPASI</p><h2>Fasilitas lebih baik, dimulai dari kita.</h2></div><span>01 — LAPORAN BARU</span></div>
+    <div class="report-workspace">
+    <aside class="report-sidebar" aria-label="Panduan pengisian">
+      <div class="sidebar-intro"><span class="sidebar-symbol" aria-hidden="true">↗</span><p class="step-label">LAPORAN FASILITAS</p><h2>Bantu kami<br>memahami masalahnya.</h2><p>Detail yang tepat membuat laporanmu lebih mudah dipahami.</p></div>
+      <ol class="form-outline"><li data-section="0"><span>01</span>Kategori fasilitas</li><li data-section="1"><span>02</span>Lokasi kerusakan</li><li data-section="2"><span>03</span>Deskripsi masalah</li><li data-section="3"><span>04</span>Bukti foto <small>Opsional</small></li><li data-section="4"><span>05</span>Waktu kejadian <small>Opsional</small></li></ol>
+      <div class="completion"><div><span>Isian utama</span><strong id="completionLabel">0 dari 3 lengkap</strong></div><div class="completion-track"><span id="completionBar"></span></div></div>
+      <div class="sidebar-tip"><strong>Laporan yang baik itu spesifik.</strong><p>Sebutkan fasilitas, posisi, dan kondisi yang kamu temukan. Foto dapat membantu memperjelas masalah.</p></div>
+    </aside>
+    <section id="form-section" class="panel">
+      <div class="form-banner"><span><i></i> FORMULIR PELAPORAN</span><span>CampusFix / Laporan baru</span></div>
+      <div class="panel-heading">
+        <div>
+          <p class="step-label">Form Laporan</p>
+          <h2>Apa yang perlu diperbaiki?</h2><p class="panel-description">Ceritakan temuanmu. Kita mulai dari detail fasilitasnya.</p>
+        </div>
+        <span class="required-note">* wajib diisi</span>
+      </div>
+
+      <form id="reportForm" novalidate>
+        <div class="form-section">
+          <div class="section-heading">
+            <span class="section-number">1</span>
+            <div>
+              <h3>Kategori kerusakan <span>*</span></h3>
+              <p>Pilih jenis fasilitas yang mengalami kerusakan.</p>
+            </div>
+          </div>
+
+          <div class="category-grid" id="categoryGrid">
+            <label class="category-card">
+              <input type="radio" name="category" value="AC" aria-label="AC">
+              <span class="category-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M4.2 7.5l15.6 9M4.2 16.5l15.6-9M9 5l3 3 3-3M9 19l3-3 3 3"/></svg></span>
+              <span class="category-title">AC</span>
+            </label>
+
+            <label class="category-card">
+              <input type="radio" name="category" value="Proyektor" aria-label="Proyektor">
+              <span class="category-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"/><circle cx="16" cy="12" r="3"/><path d="M7 10h2M7 14h2M8 3v3M16 3v3"/></svg></span>
+              <span class="category-title">Proyektor</span>
+            </label>
+
+            <label class="category-card">
+              <input type="radio" name="category" value="Komputer" aria-label="Komputer">
+              <span class="category-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span>
+              <span class="category-title">Komputer</span>
+            </label>
+
+            <label class="category-card">
+              <input type="radio" name="category" value="Lampu" aria-label="Lampu">
+              <span class="category-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M8 13a6 6 0 1 1 8 0c-1 1-1 2-1 2H9s0-1-1-2Z"/></svg></span>
+              <span class="category-title">Lampu</span>
+            </label>
+
+            <label class="category-card">
+              <input type="radio" name="category" value="Meja & Kursi" aria-label="Meja & Kursi">
+              <span class="category-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 13V4h12v9M4 13h16v4H4zM6 17v4M18 17v4M9 4v9M15 4v9"/></svg></span>
+              <span class="category-title">Meja & Kursi</span>
+            </label>
+          </div>
+          <p class="field-error" id="categoryError"></p>
+        </div>
+
+        <div class="form-section">
+          <div class="section-heading">
+            <span class="section-number">2</span>
+            <div>
+              <h3>Lokasi kerusakan <span>*</span></h3>
+              <p>Gedung G: G1–G6. Gedung F: lantai 2–12, masing-masing 8 ruangan. Lantai 1 tidak memiliki kelas.</p>
+            </div>
+          </div>
+
+          <div class="field-grid two-columns">
+            <div class="field-group">
+              <label for="building">Gedung <span>*</span></label>
+              <select id="building" name="building">
+                <option value="">Pilih gedung</option>
+                <option value="Gedung G">Gedung G</option>
+                <option value="Gedung F">Gedung F</option>
+              </select>
+              <p class="field-error" id="buildingError"></p>
+            </div>
+
+            <div class="field-group">
+              <label for="room">Ruangan <span>*</span></label>
+              <select id="room" name="room" disabled>
+                <option value="">Pilih gedung terlebih dahulu</option>
+              </select>
+              <p class="field-error" id="roomError"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <div class="section-heading">
+            <span class="section-number">3</span>
+            <div>
+              <h3>Deskripsi masalah <span>*</span></h3>
+              <p>Jelaskan kondisi kerusakan secara singkat dan jelas.</p>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="description">Deskripsi kerusakan <span>*</span></label>
+            <textarea
+              id="description"
+              name="description"
+              rows="5"
+              maxlength="500"
+              placeholder="Contoh: AC menyala tetapi tidak mengeluarkan udara dingin dan terdengar suara keras."
+            ></textarea>
+            <div class="field-meta">
+              <p class="field-error" id="descriptionError"></p>
+              <span id="descriptionCount">0/500</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <div class="section-heading">
+            <span class="section-number">4</span>
+            <div>
+              <h3>Bukti foto <small class="optional-label">Opsional</small></h3>
+              <p>Opsional. Gunakan JPG, JPEG, atau PNG dengan ukuran maksimal 5 MB.</p>
+            </div>
+          </div>
+
+          <div class="upload-box" id="uploadBox">
+            <input id="photo" name="photo" type="file" accept=".jpg,.jpeg,.png,image/jpeg,image/png" hidden>
+            <button type="button" class="upload-trigger" id="uploadTrigger">
+              <span class="upload-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 16V3m-5 5 5-5 5 5M4 15v5a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-5"/></svg></span>
+              <span>
+                <strong>Pilih foto kerusakan</strong>
+                <small>Klik untuk memilih file dari perangkat</small>
+              </span>
+            </button>
+            <div class="preview-wrap" id="previewWrap" hidden>
+              <img id="previewImage" alt="Preview foto kerusakan">
+              <div class="preview-info">
+                <strong id="photoName"></strong>
+                <span id="photoSize"></span>
+              </div>
+              <button type="button" class="text-button danger" id="removePhoto">Hapus</button>
+            </div>
+          </div>
+          <p class="field-error" id="photoError"></p>
+        </div>
+
+        <div class="form-section">
+          <div class="section-heading">
+            <span class="section-number">5</span>
+            <div>
+              <h3>Waktu kejadian <small class="optional-label">Opsional</small></h3>
+              <p>Opsional. Isi jika kamu mengetahui kapan kerusakan terjadi.</p>
+            </div>
+          </div>
+
+          <div class="field-grid two-columns">
+            <div class="field-group">
+              <label for="eventDate">Tanggal</label>
+              <input id="eventDate" name="eventDate" type="date">
+              <p class="field-error" id="eventDateError"></p>
+            </div>
+
+            <div class="field-group">
+              <label for="eventClock">Jam</label>
+              <div class="time-picker">
+                <input id="eventClock" type="text" inputmode="numeric" maxlength="5" placeholder="hh:mm" autocomplete="off" aria-describedby="timeHint eventTimeError">
+                <div class="period-picker" role="group" aria-label="Periode waktu">
+                  <label><input type="radio" name="eventPeriod" value="AM" checked><span>AM</span></label>
+                  <label><input type="radio" name="eventPeriod" value="PM"><span>PM</span></label>
+                </div>
+              </div>
+              <input id="eventTime" name="eventTime" type="hidden">
+              <small id="timeHint" class="time-hint">Format 01:00–12:59 · AM sebelum siang, PM setelah siang.</small>
+              <p class="field-error" id="eventTimeError"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div>
+            <h3>Sebelum mengirim</h3>
+            <p>Pastikan kategori, lokasi, dan deskripsi sudah benar.</p>
+          </div>
+          <button class="primary-button" type="submit">
+            Buat Tiket Laporan →
+          </button>
+        </div>
+      </form>
+    </section>
+
+    </div>
+
+    <section id="success-section" class="panel success-panel" hidden>
+      <div class="success-icon">✓</div>
+      <p class="step-label">Simulasi laporan berhasil</p>
+      <h2>Terima kasih sudah peduli pada kampus.</h2>
+      <p class="success-copy">
+        Berikut nomor tiket simulasi dan ringkasan laporanmu. Data belum dikirim ke pihak kampus.
+      </p>
+
+      <div class="ticket-card">
+        <div>
+          <span>Nomor Tiket</span>
+          <strong id="ticketNumber">FILKOM-CF-2026-00001</strong>
+        </div>
+        <div>
+          <span>Status</span>
+          <strong class="status-pill">Tiket simulasi</strong>
+        </div>
+      </div>
+
+      <div class="summary-card">
+        <h3>Ringkasan laporan</h3>
+        <dl>
+          <div>
+            <dt>Kategori</dt>
+            <dd id="summaryCategory">-</dd>
+          </div>
+          <div>
+            <dt>Lokasi</dt>
+            <dd id="summaryLocation">-</dd>
+          </div>
+          <div>
+            <dt>Deskripsi</dt>
+            <dd id="summaryDescription">-</dd>
+          </div>
+          <div>
+            <dt>Waktu kejadian</dt>
+            <dd id="summaryTime">Tidak diisi</dd>
+          </div>
+        </dl>
+      </div>
+
+      <button id="newReportButton" class="secondary-button" type="button">Buat Laporan Baru</button>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p>CampusFix FILKOM · Fakultas Ilmu Komputer UB</p>
+      <p>Proyek tugas kampus · Prototipe, bukan layanan resmi FILKOM UB</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
